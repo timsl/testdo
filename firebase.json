@@ -1,0 +1,9 @@
+{
+  "firebase": "guestdo-tim",
+  "public": "app",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}

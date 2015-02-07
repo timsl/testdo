@@ -1,23 +1,23 @@
 <form ng-submit="saveGuest()"class="form-inline guest-form" role="form">
   <div class="form-group">
     <label class="sr-only" for="guestName">Guest Name</label>
-    <input ng-model="guest.name" type="text" class="form-control" id="guestName" placeholder="Name">
+    <input ng-model="newGuest.name" type="text" class="form-control" id="guestName" placeholder="Name">
   </div>
   <div class="form-group">
     <label class="sr-only" for="guestAge">Guest Age</label>
-    <input ng-model="guest.age"t ype="text" class="form-control" id="guestAge" placeholder="Age">
+    <input ng-model="newGuest.age"type="text" class="form-control" id="guestAge" placeholder="Age">
   </div>
   <div class="form-group">
     <label class="sr-only" for="guestGender">Guest Gender</label>
-    <input ng-model="guest.gender" type="text" class="form-control" id="guestGender" placeholder="Gender">
+    <input ng-model="newGuest.gender" type="text" class="form-control" id="guestGender" placeholder="Gender">
   </div>
   <div class="form-group">
     <label class="sr-only" for="City">City</label>
-    <input ng-model="guest.city" type="text" class="form-control" id="City" placeholder="City">
+    <input ng-model="newGuest.city" type="text" class="form-control" id="City" placeholder="City">
   </div>
   <div class="form-group">
     <label class="sr-only" for="Country">Country</label>
-    <input ng-model="guest.country" type="text" class="form-control" id="Country" placeholder="Country">
+    <input ng-model="newGuest.country" type="text" class="form-control" id="Country" placeholder="Country">
   </div>
   <button type="submit" class="btn btn-primary">Add Guest</button>
 </form>
@@ -30,10 +30,11 @@
 			<th>Gender</th>
 			<th>City</th>
 			<th>Country</th>
+			<th>Actions</th>
 		</tr>
 	</thead>
 	<!-- Angular feature repeterar html-here för alla items i collection -->
-	<tr ng-repeat="guest in guests">
+	<tr ng-repeat="guest in guests | orderByPriority">
 	<td>
 		<div>{{guest.name}}</div>
 	</td>
@@ -49,7 +50,10 @@
 	<td>	
 		<div>{{guest.country}}</div>
 	</td>
-
+	<td>
+		<!-- Indicates a successful or positive action -->
+		<button ng-click="checkIn(guest.id)" type="button" class="btn btn-success">Check in</button>
+	</td>
 
 	</tr>
 		
