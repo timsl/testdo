@@ -38,7 +38,7 @@
 		</tr>
 	</thead>
 	<!-- Angular feature repeterar html-here för alla items i collection -->
-	<tr ng-repeat="guest in guests">
+	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:false}">
 	<td>
 		<div>{{guest.name}}</div>
 	</td>
@@ -65,6 +65,46 @@
 
 </table>
 </div>
+
+
 <div class="guest-list">
 <h2>Current Guests</h2>
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>City</th>
+			<th>Country</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<!-- Angular feature repeterar html-here för alla items i collection -->
+	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:true}">
+	<td>
+		<div>{{guest.name}}</div>
+	</td>
+	<td>
+		<div>{{guest.age}}</div>
+	</td>
+	<td>
+		<div>{{guest.gender}}</div>
+	</td>
+	<td>
+		<div>{{guest.city}}</div>
+	</td>
+	<td>	
+		<div>{{guest.country}}</div>
+	</td>
+	<td>
+		<!-- <input type="checkbox" ng-model="guest.checkedIn" ng-change="guests.$save(guest.$id)"> -->
+		<!-- Indicates a successful or positive action -->
+		<button ng-click="checkinGuest(guest)" type="button" class="btn btn-success">Check in</button>
+	</td>
+
+	</tr>
+		
+
+</table>
 </div>
