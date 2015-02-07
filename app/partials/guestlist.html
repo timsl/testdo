@@ -39,8 +39,6 @@
 	</thead>
 	<!-- Angular feature repeterar html-here för alla items i collection -->
 
-	<tr ng-repeat="guest in guests | orderByPriority | filter:checkedIn = false">
-
 	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:false}">
 
 	<td>
@@ -61,7 +59,7 @@
 	<td>
 		<!-- <input type="checkbox" ng-model="guest.checkedIn" ng-change="guests.$save(guest.$id)"> -->
 		<!-- Indicates a successful or positive action -->
-		<button ng-click="checkinGuest(guest)" type="button" class="btn btn-success">Check in</button>
+		<button ng-click="checkinGuest(guest)" type="button" class="btn btn-success btn-block">Check in</button>
 	</td>
 
 	</tr>
@@ -72,10 +70,10 @@
 
 <div class="guest-list">
 <h2>Current Guests</h2>
-
 </div>
 
-<table class="table table-hover">
+<div class="guest-list-table">
+<table class="table table-hover span3">
 	<thead>
 		<tr>
 			<th>Name</th>
@@ -87,7 +85,9 @@
 		</tr>
 	</thead>
 	<!-- Angular feature repeterar html-here för alla items i collection -->
+
 	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:true}">
+
 	<td>
 		<div>{{guest.name}}</div>
 	</td>
@@ -104,11 +104,12 @@
 		<div>{{guest.country}}</div>
 	</td>
 	<td>
-		<button ng-click="checkoutGuest(guest)" type="button" class="btn btn-success">Check out</button>
+		<!-- <input type="checkbox" ng-model="guest.checkedIn" ng-change="guests.$save(guest.$id)"> -->
+		<!-- Indicates a successful or positive action -->
+		<button ng-click="checkoutGuest(guest)" type="button" class="btn btn-danger btn-block">Check out</button>
 	</td>
 
 	</tr>
 		
-
 </table>
 </div>

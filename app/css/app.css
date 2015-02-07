@@ -17,6 +17,11 @@ div {
 	font-weight: 300;
 }
 
+.table {
+	table-layout: fixed;
+	word-wrap: break-word;
+}
+
 .container {
 	font-weight: 300;
 }
