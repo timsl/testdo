@@ -40,7 +40,7 @@
 	<!-- Angular feature repeterar html-here för alla items i collection -->
 
 	<tr ng-repeat="guest in guests | orderByPriority | filter:checkedIn = false">
-=======
+
 	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:false}">
 
 	<td>
