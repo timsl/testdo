@@ -38,7 +38,7 @@
 		</tr>
 	</thead>
 	<!-- Angular feature repeterar html-here för alla items i collection -->
-	<tr ng-repeat="guest in guests | orderByPriority">
+	<tr ng-repeat="guest in guests">
 	<td>
 		<div>{{guest.name}}</div>
 	</td>
@@ -55,8 +55,9 @@
 		<div>{{guest.country}}</div>
 	</td>
 	<td>
+		<!-- <input type="checkbox" ng-model="guest.checkedIn" ng-change="guests.$save(guest.$id)"> -->
 		<!-- Indicates a successful or positive action -->
-		<button ng-click="checkIn(guest.id)" type="button" class="btn btn-success">Check in</button>
+		<button ng-click="checkinGuest(guest)" type="button" class="btn btn-success">Check in</button>
 	</td>
 
 	</tr>

@@ -18,12 +18,16 @@ angular.module('myApp.controllers', [])
   	$scope.saveGuest = function() {
   		// Add data till firebase
   		$scope.guests.$add($scope.newGuest);
-  		$scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: '', done: 'false'};
+  		$scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: ''};
   	}
 
   	$scope.login = function() {
   		$location.path('/guestlist');
   	}
 
-  	
+  	$scope.checkinGuest = function(guest) {
+  		guest.checkedIn = 'true';
+  		$scope.guests.$save(guest.$id);
+  	}
+
   }]);
