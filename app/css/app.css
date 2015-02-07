@@ -1,5 +1,11 @@
-body {
+/*body {
   padding-top: 80px;
+  background-image: url('/img/nordiclighthotel.jpg');
+}*/
+
+body #landing_page {
+  padding-top: 80px !important;
+  background-image: url('/img/nordiclighthotel.jpg');
 }
 
 div {
@@ -21,6 +27,7 @@ div {
 	table-layout: fixed;
 	word-wrap: break-word;
 }
+
 
 .container {
 	font-weight: 300;
