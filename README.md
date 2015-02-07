@@ -1,4 +1,7 @@
-# Testdo - fuk ye
+# Testdo
+
+
 
 ## To run locally use:
-python -m http.server
+Windows/OSx: python -m SimpleHTTPServer
+Linux: python -m http.server
