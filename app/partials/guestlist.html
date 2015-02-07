@@ -1,0 +1,62 @@
+<form ng-submit="saveGuest()"class="form-inline guest-form" role="form">
+  <div class="form-group">
+    <label class="sr-only" for="guestName">Guest Name</label>
+    <input ng-model="guest.name" type="text" class="form-control" id="guestName" placeholder="Name">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="guestAge">Guest Age</label>
+    <input ng-model="guest.age"t ype="text" class="form-control" id="guestAge" placeholder="Age">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="guestGender">Guest Gender</label>
+    <input ng-model="guest.gender" type="text" class="form-control" id="guestGender" placeholder="Gender">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="City">City</label>
+    <input ng-model="guest.city" type="text" class="form-control" id="City" placeholder="City">
+  </div>
+  <div class="form-group">
+    <label class="sr-only" for="Country">Country</label>
+    <input ng-model="guest.country" type="text" class="form-control" id="Country" placeholder="Country">
+  </div>
+  <button type="submit" class="btn btn-primary">Add Guest</button>
+</form>
+<h2>Future Guests</h2>
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>City</th>
+			<th>Country</th>
+		</tr>
+	</thead>
+	<!-- Angular feature repeterar html-here för alla items i collection -->
+	<tr ng-repeat="guest in guests">
+	<td>
+		<div>{{guest.name}}</div>
+	</td>
+	<td>
+		<div>{{guest.age}}</div>
+	</td>
+	<td>
+		<div>{{guest.gender}}</div>
+	</td>
+	<td>
+		<div>{{guest.city}}</div>
+	</td>
+	<td>	
+		<div>{{guest.country}}</div>
+	</td>
+
+
+	</tr>
+		
+
+</table>
+
+<br>
+
+<h2>Current Guests</h2>
+

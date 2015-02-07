@@ -7,7 +7,8 @@ angular.module('myApp', [ // App container
   'myApp.filters',
   'myApp.services',
   'myApp.directives',
-  'myApp.controllers'
+  'myApp.controllers',
+  'firebase'
 ]).
 config(['$routeProvider', function($routeProvider) {
 	/* 	
@@ -19,6 +20,10 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {
   	templateUrl: 'partials/landing_page.html',
   	controller: 'LandingPageController'
+  });
+  $routeProvider.when('/guestlist', {
+    templateUrl: 'partials/guestlist.html',
+    controller: 'GuestlistController'
   });
   // Annars hamna i landingpage
   $routeProvider.otherwise({redirectTo: '/'});

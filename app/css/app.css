@@ -1,7 +1,15 @@
 body {
-  padding-top: 50px;
+  padding-top: 80px;
 }
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+}
+
+.starter-template h1 {
+	font-size: 60px;
+}
+
+.guest-form {
+	margin-bottom: 15px;
 }
