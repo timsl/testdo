@@ -19,7 +19,7 @@ config(['$routeProvider', function($routeProvider) {
 	*/
   $routeProvider.when('/messages', {
     templateUrl: 'partials/messages.html',
-    controller: 'MessagelistController'
+    controller: 'MessagesController'
   });
   $routeProvider.when('/', {
   	templateUrl: 'partials/landing_page.html',

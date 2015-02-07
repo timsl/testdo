@@ -1,8 +1,6 @@
 <div class="col-md-2 sidestuff">
   <ul class="nav nav-sidebar">
     <li class="active">All Guests<span class="sr-only">(current)</span></li>
-    <li data-ng-repeat-start="guest in guests">{{guest}}</li>
-    <li>{{guest}}</li>
-    <li ng-repeat-end>{{guest}}</li>
+    <li ng-repeat="guest in guests">{{guest.name}}</li>
   </ul>
 </div>
