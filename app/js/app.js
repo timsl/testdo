@@ -17,6 +17,10 @@ config(['$routeProvider', function($routeProvider) {
 	* 	Ex: Om en hemsida innehåller artiklar hämtar controller artiklarna och visar på vår
 	*	hemsida
 	*/
+  $routeProvider.when('/messages', {
+    templateUrl: 'partials/messages.html',
+    controller: 'MessagelistController'
+  });
   $routeProvider.when('/', {
   	templateUrl: 'partials/landing_page.html',
   	controller: 'LandingPageController'

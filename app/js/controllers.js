@@ -34,5 +34,10 @@ angular.module('myApp.controllers', [])
       guest.checkedIn = 'false';
       $scope.guests.$save(guest.$id);
     }
+  }])
 
-  }]);
+  .controller('MessagesController' [function() {
+
+  }])
+  ;
+
