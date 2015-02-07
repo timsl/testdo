@@ -1,4 +1,4 @@
-### Testdo - fuk ye
+# Testdo - fuk ye
 
 ## To run locally use
-# python -m http.server
+### python -m http.server
