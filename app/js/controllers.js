@@ -30,4 +30,9 @@ angular.module('myApp.controllers', [])
   		$scope.guests.$save(guest.$id);
   	}
 
+    $scope.checkoutGuest = function(guest) {
+      guest.checkedIn = 'false';
+      $scope.guests.$save(guest.$id);
+    }
+
   }]);

@@ -38,7 +38,11 @@
 		</tr>
 	</thead>
 	<!-- Angular feature repeterar html-here för alla items i collection -->
+<<<<<<< HEAD
 	<tr ng-repeat="guest in guests | orderByPriority | filter:checkedIn = false">
+=======
+	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:false}">
+>>>>>>> edb298d882d936703b894c31787ecadbba364792
 	<td>
 		<div>{{guest.name}}</div>
 	</td>
@@ -64,6 +68,48 @@
 		
 </table>
 </div>
+
+
 <div class="guest-list">
 <h2>Current Guests</h2>
+<<<<<<< HEAD
 </div>
+=======
+<table class="table table-hover">
+	<thead>
+		<tr>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Gender</th>
+			<th>City</th>
+			<th>Country</th>
+			<th>Actions</th>
+		</tr>
+	</thead>
+	<!-- Angular feature repeterar html-here för alla items i collection -->
+	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:true}">
+	<td>
+		<div>{{guest.name}}</div>
+	</td>
+	<td>
+		<div>{{guest.age}}</div>
+	</td>
+	<td>
+		<div>{{guest.gender}}</div>
+	</td>
+	<td>
+		<div>{{guest.city}}</div>
+	</td>
+	<td>	
+		<div>{{guest.country}}</div>
+	</td>
+	<td>
+		<button ng-click="checkoutGuest(guest)" type="button" class="btn btn-success">Check out</button>
+	</td>
+
+	</tr>
+		
+
+</table>
+</div>
+>>>>>>> edb298d882d936703b894c31787ecadbba364792
