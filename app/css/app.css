@@ -4,12 +4,37 @@ body {
 .starter-template {
   padding: 40px 15px;
   text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 300;
 }
 
 .starter-template h1 {
 	font-size: 60px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+}
+
+.container {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 }
 
 .guest-form {
 	margin-bottom: 15px;
+}
+
+.form-group {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
+}
+
+.guest-list h2 {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 400;
+}
+
+.guest-list-table {
+	font-size: 16px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-weight: 300;
 }
