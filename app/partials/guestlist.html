@@ -38,7 +38,7 @@
 		</tr>
 	</thead>
 	<!-- Angular feature repeterar html-here för alla items i collection -->
-	<tr ng-repeat="guest in guests">
+	<tr ng-repeat="guest in guests | orderByPriority | filter:checkedIn = false">
 	<td>
 		<div>{{guest.name}}</div>
 	</td>
@@ -62,7 +62,6 @@
 
 	</tr>
 		
-
 </table>
 </div>
 <div class="guest-list">
