@@ -34,6 +34,13 @@ angular.module('myApp.controllers', [])
       guest.checkedIn = 'false';
       $scope.guests.$save(guest.$id);
     }
+
+    $('#guestModal').on('show.bs.modal', function (event) {
+        var button = $(event.relatedTarget) // Button that triggered the modal
+        var guest = button.data('guest')
+        var modal = $(this)
+        modal.find('.modal-body input').val(guest)
+    })
   }])
 
     .controller('MessagesController', ['$scope', '$firebase', '$location', function($scope, $firebase, $location) {

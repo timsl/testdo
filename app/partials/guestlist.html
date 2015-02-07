@@ -39,21 +39,21 @@
 	</thead>
 	<!-- Angular feature repeterar html-here för alla items i collection -->
 
-	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:false}" data-toggle="modal" data-target="#myModal">
+	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:false}">
 
-	<td>
+	<td data-toggle="modal" data-target="#guestModal">
 		<div>{{guest.name}}</div>
 	</td>
-	<td>
+	<td data-toggle="modal" data-target="#guestModal">
 		<div>{{guest.age}}</div>
 	</td>
-	<td>
+	<td data-toggle="modal" data-target="#guestModal">
 		<div>{{guest.gender}}</div>
 	</td>
-	<td>
+	<td data-toggle="modal" data-target="#guestModal">
 		<div>{{guest.city}}</div>
 	</td>
-	<td>	
+	<td data-toggle="modal" data-target="#guestModal">	
 		<div>{{guest.country}}</div>
 	</td>
 	<td>
@@ -88,24 +88,22 @@
 
 	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:true}">
 
-	<td>
+	<td data-toggle="modal" data-target="#guestModal">
 		<div>{{guest.name}}</div>
 	</td>
-	<td>
+	<td data-toggle="modal" data-target="#guestModal">
 		<div>{{guest.age}}</div>
 	</td>
-	<td>
+	<td data-toggle="modal" data-target="#guestModal">
 		<div>{{guest.gender}}</div>
 	</td>
-	<td>
+	<td data-toggle="modal" data-target="#guestModal">
 		<div>{{guest.city}}</div>
 	</td>
-	<td>	
+	<td data-toggle="modal" data-target="#guestModal">	
 		<div>{{guest.country}}</div>
 	</td>
 	<td>
-		<!-- <input type="checkbox" ng-model="guest.checkedIn" ng-change="guests.$save(guest.$id)"> -->
-		<!-- Indicates a successful or positive action -->
 		<button ng-click="checkoutGuest(guest)" type="button" class="btn btn-danger btn-block">Check out</button>
 	</td>
 
@@ -116,11 +114,11 @@
 
 
 <!-- Modal -->
-<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="guestModal" tabindex="-1" role="dialog" aria-labelledby="guestModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="myModalLabel">{{guest.name}}</h4>
+        <h4 class="modal-title" id="guestModalLabel">{{guest.name}}</h4>
       </div>
 
       <div class="modal-body">
