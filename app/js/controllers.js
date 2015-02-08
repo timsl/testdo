@@ -36,10 +36,15 @@ angular.module('myApp.controllers', [])
     }
 
     $('#guestModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget) // Button that triggered the modal
-        var guest = button.data('guest')
+        var tableRow = $(event.relatedTarget) // Button that triggered the modal
+        var guest = tableRow.data('guest') //fetch data-guest=">>this stuff<<"
+        //^funkar inte
         var modal = $(this)
-        modal.find('.modal-body input').val(guest)
+        modal.find('.name').text("Info about " + guest.name + ":")
+        modal.find('.age').text("Age: " + guest.age)
+        modal.find('.gender').text("Gender: " + guest.gender)
+        modal.find('.city').text("City: " + guest.city)
+        modal.find('.country').text("Country: " + guest.country)
     })
   }])
 
