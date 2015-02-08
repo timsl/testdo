@@ -87,7 +87,7 @@
 	<!-- Angular feature repeterar html-here för alla items i collection -->
 
 	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:true}">
-
+	<!-- fulhack för att undvika att "checkout-knappen inte ska öppna guestinfo" -->
 	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.name}}</div>
 	</td>
@@ -100,7 +100,7 @@
 	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.city}}</div>
 	</td>
-	<td data-toggle="modal" data-target="#guestModal">	
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>	
 		<div>{{guest.country}}</div>
 	</td>
 	<td>
