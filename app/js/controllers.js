@@ -13,12 +13,12 @@ angular.module('myApp.controllers', [])
   	// Passa referensen till firebase service
   	$scope.guests = $firebase(guestsRef);
 
-  	$scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: 'false'};
+  	$scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: ''};
 
   	$scope.saveGuest = function() {
   		// Add data till firebase
   		$scope.guests.$add($scope.newGuest);
-  		$scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: 'false'};
+  		$scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: ''};
   	}
 
   	$scope.login = function() {

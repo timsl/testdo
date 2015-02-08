@@ -39,7 +39,7 @@
 	</thead>
 	<!-- Angular feature repeterar html-here för alla items i collection -->
 
-	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:false}">
+	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:'!true'}">
 
 	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.name}}</div>
