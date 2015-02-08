@@ -5,14 +5,18 @@ div {
 
 body {
 	/* background-image: url('/img/nordiclighthotel.jpg'); */
+	padding-top: 180px;
 }
+/*
+	
+*/
 #FrontPage {
+	padding-top: 180px;
 	position: absolute;
 	bottom: 0;
 	top: 0;
 	left: 0;
 	right: 0;
-	padding-top: 180px;
 	min-width: 100%;
 	background-image: url('/img/nordiclighthotel.jpg');
 }
