@@ -45,6 +45,7 @@ angular.module('myApp.controllers', [])
         modal.find('.gender').text("Gender: " + guest.gender)
         modal.find('.city').text("City: " + guest.city)
         modal.find('.country').text("Country: " + guest.country)
+        modal.find('.checkedin').text( (guest.checkedIn == 'true') ? "Checked in" : "Not checked in")
     })
   }])
 
