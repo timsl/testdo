@@ -41,19 +41,19 @@
 
 	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:false}">
 
-	<td data-toggle="modal" data-target="#guestModal">
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.name}}</div>
 	</td>
-	<td data-toggle="modal" data-target="#guestModal">
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.age}}</div>
 	</td>
-	<td data-toggle="modal" data-target="#guestModal">
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.gender}}</div>
 	</td>
-	<td data-toggle="modal" data-target="#guestModal">
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.city}}</div>
 	</td>
-	<td data-toggle="modal" data-target="#guestModal">	
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>	
 		<div>{{guest.country}}</div>
 	</td>
 	<td>
@@ -87,20 +87,20 @@
 	<!-- Angular feature repeterar html-here för alla items i collection -->
 
 	<tr ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:true}">
-
-	<td data-toggle="modal" data-target="#guestModal">
+	<!-- fulhack för att undvika att "checkout-knappen inte ska öppna guestinfo" -->
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.name}}</div>
 	</td>
-	<td data-toggle="modal" data-target="#guestModal">
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.age}}</div>
 	</td>
-	<td data-toggle="modal" data-target="#guestModal">
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.gender}}</div>
 	</td>
-	<td data-toggle="modal" data-target="#guestModal">
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
 		<div>{{guest.city}}</div>
 	</td>
-	<td data-toggle="modal" data-target="#guestModal">	
+	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>	
 		<div>{{guest.country}}</div>
 	</td>
 	<td>
@@ -118,15 +118,15 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h4 class="modal-title" id="guestModalLabel">{{guest.name}}</h4>
+        <h4 class="modal-title" id="guestModalLabel">gästfan</h4>
       </div>
 
       <div class="modal-body">
-      	<div>Info:</div>
-		<div>{{guest.age}}</div>
-		<div>{{guest.gender}}</div>
-		<div>{{guest.city}}</div>
-		<div>{{guest.country}}</div>
+	      	<div class="name"></div>
+			<div class="age"></div>
+			<div class="gender"></div>
+			<div class="city"></div>
+			<div class="country"></div>
       </div>
 
       <div class="modal-footer">
