@@ -2,10 +2,6 @@ div {
 	font-family: 'Source Sans Pro', sans-serif;
 }
 
-<<<<<<< HEAD
-div {
-	font-family: 'Source Sans Pro', sans-serif;
-=======
 
 body {
 	/* background-image: url('/img/nordiclighthotel.jpg'); */
@@ -23,7 +19,6 @@ body {
 	right: 0;
 	min-width: 100%;
 	background-image: url('/img/nordiclighthotel.jpg');
->>>>>>> bbb84a3850b01729d482ffc2cb12b50fb5838b03
 }
 
 

@@ -58,4 +58,3 @@ angular.module('myApp.controllers', [])
   	$scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: 'false'};
   }])
   ;
-
