@@ -4,22 +4,46 @@
 
 
 
-<div class="guest-list">
-<h2>Future Guests</h2>
-
-<div class="card">
-	<h1>This is a card!</h1>
-	<p>In essence, a card is just a rectangular region which contains content.  This content could be text, images, lists, etc... The card UI methaphor dictates the interaction and layout of these regions.</p>
+<div class="guest-cards">
+	<h2>Future Guests</h2>
+	<div class="container">
+		<div class="row" >
+			<div class="col-xs-4"  ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:false}">
+				<div class="card">
+					<div data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
+						<h1 class="name">{{guest.name}}</h1>
+						<p>
+							<div class="gender">{{guest.gender}}</div>
+							<div class="age">Is {{guest.age}} years old, and comes from {{guest.city}} in {{guest.country}}</div>
+						</p>
+					</div>
+					<button ng-click="checkinGuest(guest)" type="button" class="btn btn-success btn-block">Check in</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
 
+
+<div class="guest-cards">
+	<h2>Future Guests</h2>
+	<div class="container">
+		<div class="row" >
+			<div class="col-xs-4"  ng-repeat="guest in guests| orderByPriority | filter:{checkedIn:true}">
+				<div class="card">
+					<div data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
+						<h1 class="name">{{guest.name}}</h1>
+						<p>
+							<div class="gender">{{guest.gender}}</div>
+							<div class="age">Is {{guest.age}} years old, and comes from {{guest.city}} in {{guest.country}}</div>
+						</p>
+					</div>
+					<button ng-click="checkoutGuest(guest)" type="button" class="btn btn-danger btn-block">Check out</button>
+				</div>
+			</div>
+		</div>
+	</div>
 </div>
-
-
-
-<div class="guest-list">
-<h2>Current Guests</h2>
-</div>
-
 
 
 

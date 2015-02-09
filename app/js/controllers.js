@@ -67,6 +67,28 @@ angular.module('myApp.controllers', [])
     $scope.guests = $firebase(guestsRef);
 
     $scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: 'false'};
+    
+    $scope.checkinGuest = function(guest) {
+      guest.checkedIn = 'true';
+      $scope.guests.$save(guest.$id);
+    }
+
+    $scope.checkoutGuest = function(guest) {
+      guest.checkedIn = 'false';
+      $scope.guests.$save(guest.$id);
+    }
+    $('#guestModal').on('show.bs.modal', function (event) {
+        var tableRow = $(event.relatedTarget) // Button that triggered the modal
+        var guest = tableRow.data('guest') //fetch data-guest=">>this stuff<<"
+        //^funkar inte
+        var modal = $(this)
+        modal.find('.name').text("Info about " + guest.name + ":")
+        modal.find('.age').text("Age: " + guest.age)
+        modal.find('.gender').text("Gender: " + guest.gender)
+        modal.find('.city').text("City: " + guest.city)
+        modal.find('.country').text("Country: " + guest.country)
+        modal.find('.checkedin').text( (guest.checkedIn == 'true') ? "Checked in" : "Not checked in")
+    })
   }])
 
 

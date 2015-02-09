@@ -76,13 +76,16 @@ body {
 .card {
 	background:#FFF;
 	border:1px solid #AAA;
-	border-bottom:3px solid #BBB;
+	border-bottom:1px solid #BBB;
 	padding:0px;
 	margin:15px;
+	box-shadow: 5px 5px 3px #888888;
+	border-radius: 5px;
 	overflow:hidden;
 }
 
 .card h1 {
+	font-size: 24px;
 	margin:0px;
 	padding:10px;
 	padding-bottom:0px;
@@ -91,4 +94,5 @@ body {
 .card p {
 	margin:0px;
 	padding:10px;
+	align:center;
 }
