@@ -1,0 +1,96 @@
+
+
+
+
+
+
+<div class="guest-list">
+<h2>Future Guests</h2>
+
+<div class="card">
+	<h1>This is a card!</h1>
+	<p>In essence, a card is just a rectangular region which contains content.  This content could be text, images, lists, etc... The card UI methaphor dictates the interaction and layout of these regions.</p>
+</div>
+
+</div>
+
+
+
+<div class="guest-list">
+<h2>Current Guests</h2>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="guestModal" tabindex="-1" role="dialog" aria-labelledby="guestModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="guestModalLabel">gästfan</h4>
+      </div>
+
+      <div class="modal-body">
+      		<div class="checkedin"></div>
+	      	<div class="name"></div>
+			<div class="age"></div>
+			<div class="gender"></div>
+			<div class="city"></div>
+			<div class="country"></div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="addGuestModal" tabindex="-1" role="dialog" aria-labelledby="addGuestModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title" id="guestModalLabel">gästfan</h4>
+      </div>
+
+      <form ng-submit="saveGuest()"class="form-inline guest-form" role="form">
+  		<div class="form-group">
+    		<label class="sr-only" for="guestName">Guest Name</label>
+    		<input ng-model="newGuest.name" type="text" required="" class="form-control" id="guestName" placeholder="Name">
+ 		</div>
+  		<div class="form-group">
+    		<label class="sr-only" for="guestAge">Guest Age</label>
+    		<input ng-model="newGuest.age"type="number" min="1" max="120" required="" class="form-control" id="guestAge" placeholder="Age">
+  		</div>
+  		<div class="form-group">
+    		<label class="sr-only" for="guestGender">Guest Gender</label>
+    		<input ng-model="newGuest.gender" type="text" required="" class="form-control" id="guestGender" placeholder="Gender">
+  		</div>
+  		<div class="form-group">
+    		<label class="sr-only" for="City">City</label>
+    		<input ng-model="newGuest.city" type="text" required="" class="form-control" id="City" placeholder="City">
+  		</div>
+  		<div class="form-group">
+    		<label class="sr-only" for="Country">Country</label>
+    		<input ng-model="newGuest.country" type="text" required="" class="form-control" id="Country" placeholder="Country">
+  		</div>
+  		<button type="submit" class="btn btn-primary">Add Guest</button>
+		</form>
+		<div class="guest-list">
+
+      	<div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
