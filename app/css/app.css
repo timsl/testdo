@@ -59,6 +59,10 @@ body {
 	font-weight: 300;
 }
 
+.form-grupp {
+	width: 70%;
+	display:inline-block;
+}
 .guest-list h2 {
 	font-weight: 400;
 }
