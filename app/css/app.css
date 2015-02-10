@@ -21,6 +21,10 @@ body {
 	background-image: url('/img/nordiclighthotel.jpg');
 }
 
+.testhover:hover {
+	cursor: pointer;
+	background-color: #9ea !important;
+}
 
 .listguys {
 	font-size: 30px;
