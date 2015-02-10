@@ -8,17 +8,17 @@ angular.module('myApp.controllers', [])
   }])
   .controller('GuestlistController', ['$scope', '$firebase', '$location', function($scope, $firebase, $location) {
   	// Skapa en referens till firebaseapplikationen
-  	var guestsRef = new Firebase('https://guestdo-tim.firebaseio.com/');
+  	var guestsRef = new Firebase('https://guestdo-tim.firebaseio.com/guests');
 
   	// Passa referensen till firebase service
   	$scope.guests = $firebase(guestsRef);
 
-  	$scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: ''};
+  	$scope.newGuest = {name: '', number: '', checkedIn: ''};
 
   	$scope.saveGuest = function() {
   		// Add data till firebase
   		$scope.guests.$add($scope.newGuest);
-  		$scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: ''};
+  		$scope.newGuest = {name: '', number: '', checkedIn: ''};
   	}
 
   	$scope.login = function() {
@@ -41,32 +41,37 @@ angular.module('myApp.controllers', [])
         //^funkar inte
         var modal = $(this)
         modal.find('.name').text("Info about " + guest.name + ":")
-        modal.find('.age').text("Age: " + guest.age)
-        modal.find('.gender').text("Gender: " + guest.gender)
-        modal.find('.city').text("City: " + guest.city)
-        modal.find('.country').text("Country: " + guest.country)
+        modal.find('.number').text("Number: " + guest.number)
         modal.find('.checkedin').text( (guest.checkedIn == 'true') ? "Checked in" : "Not checked in")
     })
   }])
 
   .controller('MessagesController', ['$scope', '$firebase', '$location', function($scope, $firebase, $location) {
   	// Skapa en referens till firebaseapplikationen
-  	var guestsRef = new Firebase('https://guestdo-tim.firebaseio.com/');
+  	var guestsRef = new Firebase('https://guestdo-tim.firebaseio.com/guests');
 
   	// Passa referensen till firebase service
   	$scope.guests = $firebase(guestsRef);
 
-  	$scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: 'false'};
+  	$scope.newGuest = {name: '', number: '', checkedIn: ''};
+
+    // Skicka sms!
+    $scope.sendSMS = function() {
+      var smsRef = new Firebase('https://guestdo-tim.firebaseio.com/sms');
+      var sms = $firebase(smsRef);
+      sms.$add({Number: '+46737148419'});
+    };
+
   }])
 
   .controller('GuestcardsController', ['$scope', '$firebase', '$location', function($scope, $firebase, $location) {
     // Skapa en referens till firebaseapplikationen
-    var guestsRef = new Firebase('https://guestdo-tim.firebaseio.com/');
+    var guestsRef = new Firebase('https://guestdo-tim.firebaseio.com/guests');
 
     // Passa referensen till firebase service
     $scope.guests = $firebase(guestsRef);
 
-    $scope.newGuest = {name: '', age: '', gender: '', city: '', country: '', checkedIn: 'false'};
+    $scope.newGuest = {name: '', number: '', checkedIn: ''};
     
     $scope.checkinGuest = function(guest) {
       guest.checkedIn = 'true';
@@ -83,10 +88,7 @@ angular.module('myApp.controllers', [])
         //^funkar inte
         var modal = $(this)
         modal.find('.name').text("Info about " + guest.name + ":")
-        modal.find('.age').text("Age: " + guest.age)
-        modal.find('.gender').text("Gender: " + guest.gender)
-        modal.find('.city').text("City: " + guest.city)
-        modal.find('.country').text("Country: " + guest.country)
+        modal.find('.number').text("Number: " + guest.number)
         modal.find('.checkedin').text( (guest.checkedIn == 'true') ? "Checked in" : "Not checked in")
     })
   }])

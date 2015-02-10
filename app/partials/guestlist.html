@@ -4,20 +4,8 @@
     <input ng-model="newGuest.name" type="text" required="" class="form-control" id="guestName" placeholder="Name">
   </div>
   <div class="form-group">
-    <label class="sr-only" for="guestAge">Guest Age</label>
-    <input ng-model="newGuest.age"type="number" min="1" max="120" required="" class="form-control" id="guestAge" placeholder="Age">
-  </div>
-  <div class="form-group">
-    <label class="sr-only" for="guestGender">Guest Gender</label>
-    <input ng-model="newGuest.gender" type="text" required="" class="form-control" id="guestGender" placeholder="Gender">
-  </div>
-  <div class="form-group">
-    <label class="sr-only" for="City">City</label>
-    <input ng-model="newGuest.city" type="text" required="" class="form-control" id="City" placeholder="City">
-  </div>
-  <div class="form-group">
-    <label class="sr-only" for="Country">Country</label>
-    <input ng-model="newGuest.country" type="text" required="" class="form-control" id="Country" placeholder="Country">
+    <label class="sr-only" for="guestNumber">Guest Number</label>
+    <input ng-model="newGuest.number"type="text" required="" class="form-control" id="guestNumber" placeholder="Phone number">
   </div>
   <button type="submit" class="btn btn-primary">Add Guest</button>
 </form>
@@ -32,10 +20,7 @@
 	<thead>
 		<tr>
 			<th>Name</th>
-			<th>Age</th>
-			<th>Gender</th>
-			<th>City</th>
-			<th>Country</th>
+			<th>Number</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
@@ -47,16 +32,7 @@
 		<div>{{guest.name}}</div>
 	</td>
 	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
-		<div>{{guest.age}}</div>
-	</td>
-	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
-		<div>{{guest.gender}}</div>
-	</td>
-	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
-		<div>{{guest.city}}</div>
-	</td>
-	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>	
-		<div>{{guest.country}}</div>
+		<div>{{guest.number}}</div>
 	</td>
 	<td>
 		<!-- <input type="checkbox" ng-model="guest.checkedIn" ng-change="guests.$save(guest.$id)"> -->
@@ -79,10 +55,7 @@
 	<thead>
 		<tr>
 			<th>Name</th>
-			<th>Age</th>
-			<th>Gender</th>
-			<th>City</th>
-			<th>Country</th>
+			<th>Number</th>
 			<th>Actions</th>
 		</tr>
 	</thead>
@@ -94,16 +67,7 @@
 		<div>{{guest.name}}</div>
 	</td>
 	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
-		<div>{{guest.age}}</div>
-	</td>
-	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
-		<div>{{guest.gender}}</div>
-	</td>
-	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>
-		<div>{{guest.city}}</div>
-	</td>
-	<td data-toggle="modal" data-target="#guestModal" data-guest={{guest}}>	
-		<div>{{guest.country}}</div>
+		<div>{{guest.number}}</div>
 	</td>
 	<td>
 		<button ng-click="checkoutGuest(guest)" type="button" class="btn btn-danger btn-block">Check out</button>
@@ -126,10 +90,7 @@
       <div class="modal-body">
       		<div class="checkedin"></div>
 	      	<div class="name"></div>
-			<div class="age"></div>
-			<div class="gender"></div>
-			<div class="city"></div>
-			<div class="country"></div>
+			<div class="number"></div>
       </div>
 
       <div class="modal-footer">
