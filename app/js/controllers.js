@@ -56,10 +56,11 @@ angular.module('myApp.controllers', [])
   	$scope.newGuest = {name: '', number: '', checkedIn: ''};
 
     // Skicka sms!
-    $scope.sendSMS = function() {
+    $scope.sendSMS = function(guest, messageFrom) {
+      console.log(messageFrom)
       var smsRef = new Firebase('https://guestdo-tim.firebaseio.com/sms');
       var sms = $firebase(smsRef);
-      sms.$add({Number: '+46737148419'});
+      sms.$add({Number: guest.number, Message: messageFrom});
     };
 
   }])

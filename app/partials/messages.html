@@ -1,15 +1,14 @@
-<style>
-
-</style>
 
 <div class="col-sm-3 cold-md-2 sidestuff">
   <ul class="nav nav-sidebar nav-hover">
-    <li class="active">All Guests<span class="sr-only">(current)</span></li>
-    <li class="testhover" ng-repeat="guest in guests">{{guest.name}}</li>
+    <li class="active" ><strong>All Guests</strong><span class="sr-only">(current)</span></li>
+    <li ng-repeat="guest in guests" class="testhover" ng-click="$parent.guest_to_debug = guest" >{{guest.name}}</li>
   </ul>  
 </div>
-<div class="form-grupp">
-<textarea class="form-control" rows="12"></textarea>
-<button type="submit" ng-click="sendSMS()" class="btn btn-success" style="float:right">Send Message</button>	
-</div>
 
+<div class="form-grupp">
+<form name="smsForm" ng-submit="sendSMS(guest_to_debug.number, message)">
+<textarea ng-model="message" type="text" class="form-control" id="smsText" placeholder="message" rows="12"></textarea>
+{{guest_to_debug.number}}<input type="submit" value="Send SMS" class="btn btn-success" style="float:right"/>
+</form>
+</div>
