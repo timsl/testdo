@@ -61,6 +61,8 @@ angular.module('myApp.controllers', [])
       var smsRef = new Firebase('https://guestdo-tim.firebaseio.com/sms');
       var sms = $firebase(smsRef);
       sms.$add({Number: guest.number, Message: messageFrom});
+      alert("Sms sent to: "+guest.name+ "\nNumber: " + guest.number + "\nMeddelande: " + messageFrom + "\n\n Spamma inte pls kostar 30 öre/sms :)!");
+      $scope.message=""
     };
 
   }])
