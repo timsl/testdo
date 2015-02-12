@@ -8,7 +8,7 @@
 
 <div class="form-grupp">
 <form name="smsForm" ng-submit="sendSMS(guest_to_debug, message)">
-<textarea ng-model="message" type="text" class="form-control" id="smsText" placeholder="message" rows="12"></textarea>
+<textarea ng-model="message" required="" type="text" class="form-control" id="smsText" placeholder="message" rows="12"></textarea>
 <input type="submit" value="Send SMS" class="btn btn-success" style="float:right"/>
 {{guest_to_debug.number}}
 </form>

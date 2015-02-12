@@ -28,6 +28,7 @@ body {
 
 .listguys {
 	font-size: 30px;
+
 }
 
 .starter-template {
@@ -38,6 +39,12 @@ body {
 
 .sidestuff {
 	font-size: 25px;
+
+}
+
+.shitstuff {
+	list-style-position:inside;
+    border: 1px solid black;
 }
 
 .starter-template h1 {

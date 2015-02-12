@@ -33,6 +33,10 @@ config(['$routeProvider', function($routeProvider) {
     templateUrl: 'partials/guestcards.html',
     controller: 'GuestcardsController'
   });
+    $routeProvider.when('/analytics', {
+    templateUrl: 'partials/analytics.html',
+    controller: 'AnalyticsController'
+  });
   // Annars hamna i landingpage
   $routeProvider.otherwise({redirectTo: '/'});
 }]);

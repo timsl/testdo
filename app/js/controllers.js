@@ -67,6 +67,10 @@ angular.module('myApp.controllers', [])
 
   }])
 
+  .controller('AnalyticsController'), ['$scope', '$firebase', function($scope, $firebase) {
+
+  }]
+
   .controller('GuestcardsController', ['$scope', '$firebase', '$location', function($scope, $firebase, $location) {
     // Skapa en referens till firebaseapplikationen
     var guestsRef = new Firebase('https://guestdo-tim.firebaseio.com/guests');
